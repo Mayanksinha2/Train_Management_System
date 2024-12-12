@@ -76,7 +76,7 @@ function removeClient(clientId) {
 // Logout Functionality
 function logout() {
     // alert("Logged out successfully!");
-    window.location.href = "login.html";
+    window.location.href = "admin_login.html";
 }
 
 // Initialize Page Data

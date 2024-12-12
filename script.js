@@ -13,7 +13,7 @@ function handleRegistration(event) {
 
     // Simulate a short delay before redirecting (e.g., 2 seconds)
     setTimeout(function() {
-        window.location.href = "login.html"; // Redirect to login page
+        window.location.href = "index.html"; // Redirect to login page
     }, 2000);  // Delay of 2 seconds
 }
 
@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function logout() {
     sessionStorage.removeItem("loggedInUser");
     // alert("You have been logged out!");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 
 
