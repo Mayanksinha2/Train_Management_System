@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 30px;
+    
+}
+
+nav ul li a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li button {
+    background: none;
+    border: none;
+    color: #004080;
+    font-weight: bold;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <header> 
+         <nav>
+        <ul>
+            <li style="text-align: right;"><a href="login.html">User login</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="container">
+        <h2>Admin Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <!-- <script src="js/script.js"></script> -->
+    <script>document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        // Hardcoded admin credentials
+        const adminUsername = "admin";
+        const adminPassword = "manku123";
+    
+        // Get user input
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+    
+        // Validate credentials
+        if (username === adminUsername && password === adminPassword) {
+            // alert("Login successful!");
+            // Redirect to the home page
+            window.location.href = "admin_home.html";
+        } else {
+            // Display an error message
+            const messageDiv = document.getElementById("message");
+            messageDiv.textContent = "Invalid username or password.";
+            messageDiv.style.color = "red";
+        }
+    });
+    </script>
+</body>
+</html>

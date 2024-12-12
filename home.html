@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/styles_home.css">
+    <script src="js/script.js" defer></script> 
+    <script src="js/user_dashboard.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="text-align: center;">Ticket Management System</h1>
+            <ul>
+                <li><a href="#aggregateSection">Dashboard</a></li>
+                <li><a href="#bookTicket">Book Ticket</a></li>
+                <li><a href="#viewTickets">View Tickets</a></li>
+                <li><a href="#updateDetails">Update Details</a></li>
+                <li style="font-size: larger;"> <button id="logout" onclick="logout()">Logout</button></li> 
+                 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="aggregateSection">
+            <h2>Dashboard</h2>
+            <div class="grid-container">
+                <!-- Tickets Booked Per Class -->
+                <div class="card">
+                    <h3>Tickets Booked Per Class</h3>
+                    <table id="ticketsPerClass">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Tickets</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated dynamically -->
+                            <tr>
+                                <td colspan="2">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <!-- Sales Per Quarter -->
+                <div class="card">
+                    <h3>Sales Per Quarter</h3>
+                    <table id="salesPerQuarter">
+                        <thead>
+                            <tr>
+                                <th>Quarter</th>
+                                <th>Sales (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated dynamically -->
+                            <tr>
+                                <td colspan="2">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <!-- Book Ticket Section -->
+        <section id="bookTicket">
+            <h2>Book a Ticket</h2>
+            <form id="bookTicketForm">
+                <div class="form-group">
+                    <label for="userID">User ID:</label>
+                    <input type="text" id="userID" name="userID" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" id="mobile" name="mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="boardingStation">Boarding Station:</label>
+                    <input type="text" id="boardingStation" name="boardingStation" required>
+                </div>
+                <div class="form-group">
+                    <label for="destinationStation">Destination Station:</label>
+                    <input type="text" id="destinationStation" name="destinationStation" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketCategory">Ticket Category:</label>
+                    <select id="ticketCategory" name="ticketCategory">
+                        <option>First Class</option>
+                        <option>A.C Tier 1</option>
+                        <option>A.C Tier 2</option>
+                        <option>Tatkal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="trainID">Trains Available:</label>
+                    <select id="trainID" name="trainID" required>
+                        <!-- Data populated via JS -->
+                         <option value="" selected></option>
+                         <option value="">Humsufer Express</option>
+                         <option value="">Rajdhani Express</option>
+                         <option value="">Satabdi Express</option>
+                         <option value="">Ganga Domadar Express</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="numberOfTickets">Number of Tickets:</label>
+                    <input type="number" id="numberOfTickets" name="numberOfTickets" min="1" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- View Tickets Section -->
+        <section id="viewTickets">
+            <h2>View Tickets</h2>
+            <table id="ticketsTable">
+                <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Train ID</th>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Boarding Station</th>
+                        <th>Destination Station</th>
+                        <th>Boarding Date</th>
+                        <th>Arrival Date</th>
+                        <th>Tickets</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data populated via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Update Details Section -->
+        <section id="updateDetails">
+            <h2>Update Details</h2>
+            <form id="updateDetailsForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input type="text" id="mobileNumber" name="mobileNumber" required pattern="[0-9]{10}">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="currentPassword">Current Password:</label>
+                    <input type="password" id="currentPassword" name="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password:</label>
+                    <input type="password" id="newPassword" name="newPassword" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit">Update</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2024 Ticket Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

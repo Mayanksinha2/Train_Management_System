@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="css/styles_admin.css">
+    <script src="js/admin_script.js" defer></script> 
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="text-align: center;">Admin Panel - Ticket Management System</h1>
+            <ul>
+                <li><a href="#adminDashboard">Dashboard</a></li>
+                <li><a href="#clientManagement">Manage Clients</a></li>
+                <li><a href="admin_register_train.html">Register Train</a></li>
+                <li><a href="admin_profile.html">Profile</a></li>
+                <li style="font-size: larger;"> <button id="logout" onclick="logout()">Logout</button></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Section -->
+        <section id="adminDashboard">
+            <h2>Dashboard</h2>
+            <div class="grid-container">
+                <!-- Tickets Booked Per Class -->
+                <div class="card">
+                    <h3>Tickets Booked Per Class</h3>
+                    <table id="ticketsPerClass">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Tickets</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        
+                <!-- Sales Per Quarter -->
+                <div class="card">
+                    <h3>Sales Per Quarter</h3>
+                    <table id="salesPerQuarter">
+                        <thead>
+                            <tr>
+                                <th>Quarter</th>
+                                <th>Sales (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">Loading data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Management Section -->
+        <section id="clientManagement">
+            <h2>Client Management</h2>
+            <table id="clientsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Tickets Booked</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data populated via JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Register Train Section -->
+        <!-- <section id="registerTrain">
+            <h2>Register Train</h2>
+            <button onclick="window.location.href='admin_register_train.html'">Go to Train Registration</button>
+        </section> -->
+    </main>
+
+    <footer>
+        <p>© 2024 Admin Panel - Ticket Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

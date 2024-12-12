@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Train</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        header {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li button:hover {
+    background-color: #c9302c;
+}
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="text-align: center;">Admin Panel - Ticket Management System</h1>
+            <ul>
+                <li><a href="admin_home.html">Dashboard</a></li>
+                <li><a href="admin_home.html">Manage Clients</a></li>
+                <li><a href="admin_register_train.html">Register Train</a></li>
+                <li><a href="admin_profile.html">Profile</a></li>
+                <li style="font-size: larger;"> <button id="logout" onclick="logout()">Logout</button></li> 
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Register Train</h2>
+        <form id="register-train-form">
+            <label for="train-name">Train Name:</label>
+            <input type="text" id="train-name" name="train-name" required><br>
+
+            <label for="seats">Number of Seats:</label>
+            <input type="number" id="seats" name="seats" required><br>
+
+            <label for="to">To (Destination):</label>
+            <input type="text" id="to" name="to" required><br>
+
+            <label for="from">From (Source):</label>
+            <input type="text" id="from" name="from" required><br>
+
+            <label for="owner">Train Ownership:</label>
+            <input type="text" id="owner" name="owner" required><br>
+
+            <button type="submit">Register Train</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 Admin Panel - Ticket Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

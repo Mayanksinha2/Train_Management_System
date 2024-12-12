@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        header {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li button:hover {
+    background-color: #c9302c;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #004080;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="text-align: center;">Admin Panel - Ticket Management System</h1>
+            <ul>
+                <li><a href="admin_home.html">Dashboard</a></li>
+                <li><a href="admin_home.html">Manage Clients</a></li>
+                <li><a href="admin_register_train.html">Register Train</a></li>
+                <li><a href="admin_profile.html">Profile</a></li>
+                <li style="font-size: larger;"> <button id="logout" onclick="logout()">Logout</button></li> 
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Update Admin Profile</h2>
+        <form id="update-admin-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="^[0-9]{10}$" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 Admin Panel - Ticket Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
