@@ -438,7 +438,7 @@ if (lastTicket) {
     document.getElementById("destination-station").textContent = lastTicket.destinationStation;
 } else {
     // If no ticket data is found, redirect to the home page
-    alert("No booking details found. Redirecting to the home page.");
+    // alert("No booking details found. Redirecting to the home page.");
     window.location.href = "home.html";
 }
 
