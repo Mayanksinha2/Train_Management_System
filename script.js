@@ -436,11 +436,12 @@ if (lastTicket) {
     document.getElementById("train-id").textContent = lastTicket.trainID;
     document.getElementById("boarding-station").textContent = lastTicket.boardingStation;
     document.getElementById("destination-station").textContent = lastTicket.destinationStation;
-} else {
-    // If no ticket data is found, redirect to the home page
-    // alert("No booking details found. Redirecting to the home page.");
-    window.location.href = "home.html";
-}
+} 
+// else {
+//     // If no ticket data is found, redirect to the home page
+//     // alert("No booking details found. Redirecting to the home page.");
+//     window.location.href = "home.html";
+// }
 
 
 
