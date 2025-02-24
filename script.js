@@ -350,7 +350,7 @@ function loadTickets() {
 }
 
 // Load tickets on page load
-loadTickets();
+// loadTickets();
 
 
 // --- Update User Details ---
@@ -430,13 +430,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // Retrieve the ticket details from local storage
 const lastTicket = JSON.parse(localStorage.getItem("lastTicket"));
 
-if (lastTicket) {
-    // Populate the ticket details in the confirmation page
-    document.getElementById("booking-id").textContent = lastTicket.ticketID;
-    document.getElementById("train-id").textContent = lastTicket.trainID;
-    document.getElementById("boarding-station").textContent = lastTicket.boardingStation;
-    document.getElementById("destination-station").textContent = lastTicket.destinationStation;
-} 
+// if (lastTicket) {
+//     // Populate the ticket details in the confirmation page
+//     document.getElementById("booking-id").textContent = lastTicket.ticketID;
+//     document.getElementById("train-id").textContent = lastTicket.trainID;
+//     document.getElementById("boarding-station").textContent = lastTicket.boardingStation;
+//     document.getElementById("destination-station").textContent = lastTicket.destinationStation;
+// } 
 // else {
 //     // If no ticket data is found, redirect to the home page
 //     // alert("No booking details found. Redirecting to the home page.");
